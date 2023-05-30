@@ -4,17 +4,17 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-            - name: Get Code
+        -   name: Get Code
             uses: actions/checkout@v3
-            - name: Setup Node
+        -   name: Setup Node
             uses: actions/setup-node@v3
             with:
                 node-version: '10.x'
-            - name: Install Dependencies
+        -   name: Install Dependencies
             run: |
                 cd ./storefront-reference-architecture
                 npm install
-            - name: Build Project
+        -   name: Build Project
             run: npm run build
-            - name: deploy
+        -   name: deploy
             run: echo "Deploying..."
